@@ -56,9 +56,9 @@ class Client extends Discord.Client {
 		
 		if ((gas) <= gasvalue && (ping() == true )) {
 			cooldownfunc()
-			this.channels.fetch(`956295714571423804`)
+			this.channels.fetch(`${config.ChannelID}`)
 				// @ts-ignore
-				.then(channel => channel.send(`<@&967102043200323605> ETH gas price is less than \`${gasvalue}\`*gwei*\nCurrent: **${gas}** *GWEI*`))
+				.then(channel => channel.send(`<@&${config.RoleID}> ETH gas price is less than \`${gasvalue}\`*gwei*\nCurrent: **${gas}** *GWEI*`))
   				.catch(console.error);
 		};
 
