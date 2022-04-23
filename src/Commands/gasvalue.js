@@ -4,7 +4,7 @@ const config = require("../Data/config.json");
 module.exports = new Command({
     name: "gasvalue",
     description: "gas filler",
-    permission: "SEND_MESSAGES",
+    permission: "ADMINISTRATOR",
 
     async run(message, args, client,) {
         try {

@@ -3,7 +3,7 @@ const Command = require("../Structures/Command.js");
 module.exports = new Command({
     name: "cooldown",
     description: "Cooldown filler",
-    permission: "SEND_MESSAGES",
+    permission: "ADMINISTRATOR",
 
     async run(message, args, client,) {
         try {
