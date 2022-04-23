@@ -4,6 +4,7 @@
 
   <p align="center">
     A bot to alert a role when Ethereums GAS price drops below a certain value.
+    Invite here: *insert link*
     <br/>
     <br/>
   </p>
