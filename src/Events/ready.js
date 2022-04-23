@@ -20,6 +20,7 @@ module.exports = new Event("ready", client => {
             const fastest = await axios.get(`https://ethergas.io/fast`);      
             
             client.user.setActivity(`${fastest.data} | ${standard.data} | ${slow.data}`)
+        
         }, 15000);
     }
     catch(err) {

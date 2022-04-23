@@ -1,5 +1,5 @@
 const Command = require("../Structures/Command.js");
-const config = require("../Data/config.json");
+const Discord = require("discord.js");
 
 module.exports = new Command({
     name: "gasvalue",
@@ -11,17 +11,32 @@ module.exports = new Command({
             const fs = require('fs');
             const data = args[1]
 
+            // Consturct successEmbed 
+            const successEmbed = new Discord.MessageEmbed();
+            successEmbed.setTitle(`Success!`)
+                .setDescription(`Value updated to: **${data}** *gwei*`)
+                .setColor("#00FFFF")
+
+            // Construct errorEmbed
+            const errorEmbed = new Discord.MessageEmbed();
+            errorEmbed.setTitle(`Something went wrong!`)
+                .setDescription(`Check that the number given is an integer; the input received was: \`${data}\``)
+                .setColor("#00FFFF")
+                .setFooter({
+                    text: `Support: https://discord.gg/YbtckEktmn`
+                    });
+
             if(!Number.isNaN(+data))
                 fs.writeFile(`gasvalue.json`, data, (err) => {
                     if (err || Number.isNaN(+data)) {
                         console.log(err);
                     }
                     else {
-                        message.reply(`Value updated to: \`${data}\`gwei`);
+                        message.reply({ embeds: [successEmbed] })
                     }
                 });  
             else {
-                message.reply("Something went wrong. Check that the number given is an integer.\n\n")
+                message.reply({ embeds: [errorEmbed] })
             }
         }   
         catch(err) {
