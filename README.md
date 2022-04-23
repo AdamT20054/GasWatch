@@ -112,4 +112,4 @@ Distributed under the `GNU GPLv3` License. See [LICENSE](https://github.com/Adam
 
 ## Acknowledgements
 
-* [Pat](https://github.com/AhsokaT)
+* [Pat](https://github.com/AhsokaT) - *Code master who helps me solve issues <3*
