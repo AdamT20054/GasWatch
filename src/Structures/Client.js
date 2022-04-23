@@ -1,6 +1,5 @@
 /** @format */
 // @ts-check
-
 const { default: axios } = require('axios');
 const Discord = require("discord.js");
 const Command = require("./Command.js");
@@ -56,9 +55,33 @@ class Client extends Discord.Client {
 		
 		if ((gas) <= gasvalue && (ping() == true )) {
 			cooldownfunc()
+			const slow = await axios.get(`https://ethergas.io/low`);
+            const standard = await axios.get(`https://ethergas.io/standard`);
+            const fastest = await axios.get(`https://ethergas.io/fast`);      
+
+			// Construct embed
+			const pingEmbed = new Discord.MessageEmbed();
+            pingEmbed.setTitle(`Ethereum has low gas!`)
+                .setDescription(`<@&${config.RoleID}> ETH gas value is less than **${gasvalue}** *gwei*!`)
+                .setColor("#00FFFF")
+				.addFields({
+					name: "Fastest",
+					value: `${fastest.data}`,
+					inline: true
+				},{
+					name: "Standard",
+					value: `${standard.data}`,
+					inline: true
+				}, {
+					name: "Slowest",
+					value: `${slow.data}`,
+					inline: true
+				});
+
+
 			this.channels.fetch(`${config.ChannelID}`)
 				// @ts-ignore
-				.then(channel => channel.send(`<@&${config.RoleID}> ETH gas price is less than \`${gasvalue}\`*gwei*\nCurrent: **${gas}** *GWEI*`))
+				.then(channel =>channel.send({ embeds: [pingEmbed] }))
   				.catch(console.error);
 		};
 

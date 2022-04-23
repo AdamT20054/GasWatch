@@ -1,4 +1,5 @@
 const Command = require("../Structures/Command.js");
+const Discord = require("discord.js");
 
 module.exports = new Command({
     name: "cooldown",
@@ -6,21 +7,39 @@ module.exports = new Command({
     permission: "ADMINISTRATOR",
 
     async run(message, args, client,) {
+        // Constructing embebs
+
         try {
             
             const fs = require('fs');
             const data = args[1]
+
+            // Consturct successEmbed 
+            const successEmbed = new Discord.MessageEmbed();
+            successEmbed.setTitle(`Success!`)
+                .setDescription(`Value updated to: **${data}** *ms*`)
+                .setColor("#00FFFF")
+
+            // Construct errorEmbed
+            const errorEmbed = new Discord.MessageEmbed();
+            errorEmbed.setTitle(`Something went wrong!`)
+                .setDescription(`Check that the number given is an integer; the input received was: \`${data}\``)
+                .setColor("#00FFFF")
+                .setFooter({
+                    text: `Support: https://discord.gg/YbtckEktmn`
+                    });
+
             if(!Number.isNaN(+data))
                 fs.writeFile(`cooldownvalue.json`, data, (err) => {
                     if (err || Number.isNaN(+data)) {
                         console.log(err);
                     }
                     else {
-                        message.reply(`Value updated to: ${data}ms`);
+                        message.reply({ embeds: [successEmbed] })
                     }
                 });  
             else {
-                message.reply("Something went wrong. Check that the number given is an integer.\n\n")
+                message.reply({ embeds: [errorEmbed] })
             }
         }   
         catch(err) {
