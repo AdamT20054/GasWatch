@@ -9,7 +9,7 @@
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/AdamT20054/GasWatch/total) ![Contributors](https://img.shields.io/github/contributors/AdamT20054/GasWatch?color=dark-green) ![Forks](https://img.shields.io/github/forks/AdamT20054/GasWatch?style=social) ![Stargazers](https://img.shields.io/github/stars/AdamT20054/GasWatch?style=social) ![Issues](https://img.shields.io/github/issues/AdamT20054/GasWatch) ![License](https://img.shields.io/github/license/AdamT20054/GasWatch) 
+![Downloads](https://img.shields.io/github/downloads/AdamT20054/GasWatch/total) ![Contributors](https://img.shields.io/github/contributors/AdamT20054/GasWatch?color=dark-green) ![Issues](https://img.shields.io/github/issues/AdamT20054/GasWatch) ![License](https://img.shields.io/github/license/AdamT20054/GasWatch) ![Forks](https://img.shields.io/github/forks/AdamT20054/GasWatch?style=social) ![Stargazers](https://img.shields.io/github/stars/AdamT20054/GasWatch?style=social)
 
 ## About The Project
 
