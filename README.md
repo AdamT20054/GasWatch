@@ -110,7 +110,7 @@ Distributed under the `GNU GPLv3` License. See [LICENSE](https://github.com/Adam
 
 ## Authors
 
-* **Adam O'neill** - *A-level student* - [Adam O'neill](https://github.com/AdamT20054) - *Built program.*
+* [Adam O'neill](https://github.com/AdamT20054) - *A-level student* - *program developer.*
 
 ## Acknowledgements
 
