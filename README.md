@@ -3,8 +3,7 @@
   <h3 align="center">GasWatch</h3>
 
   <p align="center">
-    A bot to alert a role when Ethereums GAS price drops below a certain value.
-    Invite here: *insert link*
+    A bot to alert a role when Ethereums GAS price drops below a certain value.<br />Invite here: *insert link*
     <br/>
     <br/>
   </p>
