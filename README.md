@@ -46,7 +46,7 @@ git clone https://github.com/Adamt20054/GasWatch.git
      ```sh
      npm install
      ```
-     A new file called `package-lock.json` should appear after NPM has installed the packages it needs. If you get an error, make sure you are in the right directory (The same directory as the package.json)
+     Your `node_modules` folder should populate after NPM has installed the packages it needs. If you get an error, make sure you are in the right directory (The same directory as the package.json) and try deleting `package-lock.json` if the error continues.
  
  
  3. Get a bot token by creating an application at https://discord.com/developers/applications
