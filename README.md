@@ -46,7 +46,7 @@ git clone https://github.com/Adamt20054/GasWatch.git
      ```sh
      npm install
      ```
-     A new file called `package-lock.json` should appear after NPM has installed the packages it needs.
+     A new file called `package-lock.json` should appear after NPM has installed the packages it needs. If you get an error, make sure you are in the right directory (The same directory as the package.json)
  
  
  3. Get a bot token by creating an application at https://discord.com/developers/applications
@@ -86,6 +86,8 @@ The program checks the API every 15minutes, so without this cooldown the role wo
 -cooldown 3600000
 ```
 The cooldown command uses Miliseconds for the value given.
+
+As default, the bot has a 1Hour cooldown and is triggered when the GWEI gas value drops below 200
 
 ## Contributing
 
