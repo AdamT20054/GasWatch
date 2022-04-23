@@ -1,4 +1,6 @@
 {
 	"token": "PUT BOT TOKEN HERE",
-	"prefix": "-"
+	"prefix": "-",
+	"ChannelID": "CHANNEL ID HERE",
+	"RoleID": "ROLE ID HERE"
 }
