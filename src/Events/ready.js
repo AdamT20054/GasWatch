@@ -15,11 +15,9 @@ module.exports = new Event("ready", client => {
     let i = 0 // for the alternating status
     try {
         setInterval(async () => {
-            const slow = await axios.get(`https://ethergas.io/low`);
-            const standard = await axios.get(`https://ethergas.io/standard`);
-            const fastest = await axios.get(`https://ethergas.io/fast`);      
+            const res = await `https://www.ethgasstation.info/api/ethgasAPI.json`;  
             
-            client.user.setActivity(`${fastest.data} | ${standard.data} | ${slow.data}`)
+            client.user.setActivity(`${res.data.fastest} | ${res.data.average} | ${res.data.slow}`)
         
         }, 15000);
     }

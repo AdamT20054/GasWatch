@@ -47,17 +47,18 @@ class Client extends Discord.Client {
 	async watchGas() {
 		const res = await axios.get(this.endpoint).catch(console.error);
 		const gasvalue = fs.readFileSync("gasvalue.json").toString();
+        console.log(res)
 
         if (!res)
             return setTimeout(() => { this.watchGas(); }, 500000);
 
-		const gas = res.data;
+		const gas = res.data.average;
 		
 		if ((gas) <= gasvalue && (ping() == true )) {
 			cooldownfunc()
-			const slow = await axios.get(`https://ethergas.io/low`);
-            const standard = await axios.get(`https://ethergas.io/standard`);
-            const fastest = await axios.get(`https://ethergas.io/fast`);      
+			const slow = res.data.safelow;
+            const standard = res.data.average;
+            const fastest = res.data.fastest;      
 
 			// Construct embed
 			const pingEmbed = new Discord.MessageEmbed();
@@ -66,15 +67,15 @@ class Client extends Discord.Client {
                 .setColor("#00FFFF")
 				.addFields({
 					name: "Fastest",
-					value: `${fastest.data}`,
+					value: `${fastest}`,
 					inline: true
 				},{
 					name: "Standard",
-					value: `${standard.data}`,
+					value: `${standard}`,
 					inline: true
 				}, {
 					name: "Slowest",
-					value: `${slow.data}`,
+					value: `${slow}`,
 					inline: true
 				});
 
@@ -89,7 +90,7 @@ class Client extends Discord.Client {
 	}
 
 	get endpoint() {
-		return `https://ethergas.io/standard`;
+		return `https://www.ethgasstation.info/api/ethgasAPI.json`;
 	}
 
 	start(token) {
