@@ -19,7 +19,7 @@ The GasWatch bot is built to watch Ethereums gas price and act accordingly based
 
 The GasWatch bot is built with Discord.js V13. It uses Axios for the API requests.
 
-The value for Ethereums current GAS used for the alerts, and the values used for the gas tracker in the activity section are fetched from https://ethergas.io
+The value for Ethereums current GAS used for the alerts, and the values used for the gas tracker in the activity section are fetched from `www.ethgasstation.info`
 
 ## Getting Started
 
