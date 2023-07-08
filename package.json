@@ -10,7 +10,7 @@
   "license": "GNU GPLv3",
   "dependencies": {
     "axios": "^0.24.0",
-    "db": "^3.3.1",
+    "db": "^3.9.2",
     "discord.js": "^13.3.1",
     "dotenv": "^10.0.0",
     "git": "^0.1.5"
