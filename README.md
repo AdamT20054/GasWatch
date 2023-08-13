@@ -3,7 +3,7 @@
   <h3 align="center">GasWatch</h3>
 
   <p align="center">
-    A bot to alert a role when Ethereums GAS price drops below a specified value.<br />Invite here: coming soon
+    A bot to alert a role when Ethereum's GAS price drops below a specified value.<br />Invite here: coming soon
     <br/>
     <br/>
   </p>
@@ -13,15 +13,16 @@
 
 ## About The Project
 
-The GasWatch bot is built to watch Ethereums gas price and act accordingly based on values defined by its config. The
+The GasWatch bot is built to watch Ethereum's gas price and act accordingly based on values defined by its config. The
 bot will take the value defined by `cooldown` and `gasvalue` and ping users who have a certain role whenever the API
-returns a value below `gasvalue`, as long as it is occurs after the time defined by `cooldown` has passed.
+returns a value below `gasvalue`, as long as it is occurring after the time defined by `cooldown` has passed.
 
 ## Built With
 
 The GasWatch bot is built with Discord.js V13. It uses Axios for the API requests.
 
-The value for Ethereums current GAS used for the alerts, and the values used for the gas tracker in the activity section
+The value for Ethereum's current GAS used for the alerts, and the values used for the gas tracker in the activity
+section
 and for the alerts
 are fetched from `https://docs.spice.xyz/api/ethereum/gas-fees`
 
@@ -29,8 +30,8 @@ are fetched from `https://docs.spice.xyz/api/ethereum/gas-fees`
 
 Invite the bot here: *coming soon*
 
-If you would like to host your own local version, you can follow the steps below. *Please note that the self hosted
-version is different to the public one hosted. The self hosted version is built to be used on one specific server while
+If you would like to host your own local version, you can follow the steps below. *Please note that the self-hosted
+version is different to the public one hosted. The self-hosted version is built to be used on one specific server while
 the public version is built for hundreds of servers to use at once.*
 
 ### Prerequisites
@@ -40,7 +41,7 @@ the public version is built for hundreds of servers to use at once.*
 
 ### Installation
 
-1. Clone the github repo
+1. Clone the GitHub repo
 
 ```sh
 git clone https://github.com/Adamt20054/GasWatch.git
@@ -76,7 +77,7 @@ git clone https://github.com/Adamt20054/GasWatch.git
 
 ## Usage
 
-Once the bot is running and you have invited it to your server, you can use
+Once the bot is running, and you have invited it to your server, you can use
 
 ```sh
 {prefix}gasvalue {value}
@@ -89,26 +90,26 @@ Eg, if you wanted users to be pinged when the GAS is below 70 GWEI, you'd do
 -gasvalue 70
 ```
 
-You can also change the time inbetween pings so users dont get spammed using
+You can also change the time between pings so users don't get spammed using
 
 ```sh
 {prefix}cooldown {value in ms}
 ```
 
-The program checks the API every 15minutes, so without this cooldown the role would be pinged every 15mins. If you want
-the time between pings to be atleast 1hour, you'd do
+The program checks the API every 15minutes, so without this cool-down the role would be pinged every 15mins. If you want
+the time between pings to be at least 1hour, you'd do
 
 ```sh
 -cooldown 3600000
 ```
 
-The cooldown command uses Miliseconds for the value given.
+The cool-down command uses Milliseconds for the value given.
 
-As default, the bot has a 1Hour cooldown and is triggered when the GWEI gas value drops below 200
+As default, the bot has a 1Hour cool-down and is triggered when the GWEI gas value drops below 200
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any
+Contributions are what make the open source community such an amazing place to be learned, inspire, and create. Any
 contributions you make are **greatly appreciated**.
 
 * If you have suggestions for adding or removing projects, feel free

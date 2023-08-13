@@ -8,7 +8,7 @@ const config = require("../Data/config.json");
 const cooldown = new Set();
 
 function cooldownfunc() {
-    var cooldownvalue = fs.readFileSync("cooldownvalue.json").toString();
+    let cooldownvalue = fs.readFileSync("cooldownvalue.json").toString();
     cooldown.add("1");
     setTimeout(() => {
         cooldown.delete("1");
@@ -115,7 +115,7 @@ class Client extends Discord.Client {
                 this.on(event.event, event.run.bind(null, this));
             });
 
-        this.login(token);
+        this.login(token).then(r => console.log(`Bot logged in!`));
     }
 }
 

@@ -7,10 +7,10 @@ module.exports = new Command({
     permission: "ADMINISTRATOR",
 
     async run(message, args, client,) {
-        // Constructing embebs
+        // Constructing embeds
 
         try {
-            
+
             const fs = require('fs');
             const data = args[1]
 
@@ -27,22 +27,20 @@ module.exports = new Command({
                 .setColor("#00FFFF")
                 .setFooter({
                     text: `Support: https://discord.gg/YbtckEktmn`
-                    });
+                });
 
-            if(!Number.isNaN(+data))
+            if (!Number.isNaN(+data))
                 fs.writeFile(`cooldownvalue.json`, data, (err) => {
                     if (err || Number.isNaN(+data)) {
                         console.log(err);
+                    } else {
+                        message.reply({embeds: [successEmbed]})
                     }
-                    else {
-                        message.reply({ embeds: [successEmbed] })
-                    }
-                });  
+                });
             else {
-                message.reply({ embeds: [errorEmbed] })
+                message.reply({embeds: [errorEmbed]})
             }
-        }   
-        catch(err) {
+        } catch (err) {
             console.log(err)
         }
 
