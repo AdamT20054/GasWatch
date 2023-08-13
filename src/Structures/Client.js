@@ -2,8 +2,6 @@
 // @ts-check
 const {default: axios} = require('axios');
 const Discord = require("discord.js");
-const Command = require("./Command.js");
-const Event = require("./Event.js");
 const intents = new Discord.Intents(30449);
 const fs = require("fs");
 const config = require("../Data/config.json");

@@ -11,7 +11,6 @@ module.exports = new Event("ready", client => {
     }
 
 
-    let i = 0 // for the alternating status
     try {
         setInterval(async () => {
             try {
