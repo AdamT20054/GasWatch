@@ -115,7 +115,7 @@ class Client extends Discord.Client {
                 this.on(event.event, event.run.bind(null, this));
             });
 
-        this.login(token).then(r => console.log(`Bot logged in!`));
+        this.login(token).then(() => console.log(`Bot logged in!`));
     }
 }
 

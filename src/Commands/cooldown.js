@@ -6,7 +6,7 @@ module.exports = new Command({
     description: "Cooldown filler",
     permission: "ADMINISTRATOR",
 
-    async run(message, args, client,) {
+    async run(message, args) {
         // Constructing embeds
 
         try {
