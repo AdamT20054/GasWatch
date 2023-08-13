@@ -20,11 +20,7 @@ function cooldownfunc() {
 
 
 function ping() {
-    if (cooldown.has("1")) {
-        return false
-    } else {
-        return true
-    }
+    return !cooldown.has("1");
 }
 
 class Client extends Discord.Client {
@@ -50,7 +46,6 @@ class Client extends Discord.Client {
     async watchGas() {
         const res = await axios.get(this.endpoint).catch(console.error);
         const gasvalue = fs.readFileSync("gasvalue.json").toString();
-        console.log(res)
 
         if (!res)
             return setTimeout(() => {
@@ -59,7 +54,7 @@ class Client extends Discord.Client {
 
         const gas = res.data.normal;
 
-        if ((gas) <= gasvalue && (ping() == true)) {
+        if ((gas) <= gasvalue && (ping() === true)) {
             cooldownfunc()
             const slow = res.data.slow;
             const standard = res.data.normal;
