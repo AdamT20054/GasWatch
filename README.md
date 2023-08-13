@@ -96,7 +96,8 @@ You can also change the time between pings so users don't get spammed using
 {prefix}cooldown {value in ms}
 ```
 
-The program checks the API every 15minutes, so without this cool-down the role would be pinged every 15mins. If you want
+The program checks the API every 15minutes, so without this cool-down the role would be pinged every 15 minutes. If you
+want
 the time between pings to be at least 1hour, you'd do
 
 ```sh
