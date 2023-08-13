@@ -11,6 +11,10 @@
 
 ![Downloads](https://img.shields.io/github/downloads/AdamT20054/GasWatch/total) ![Contributors](https://img.shields.io/github/contributors/AdamT20054/GasWatch?color=dark-green) ![Issues](https://img.shields.io/github/issues/AdamT20054/GasWatch) ![License](https://img.shields.io/github/license/AdamT20054/GasWatch) ![Forks](https://img.shields.io/github/forks/AdamT20054/GasWatch?style=social) ![Stargazers](https://img.shields.io/github/stars/AdamT20054/GasWatch?style=social)
 
+## DISCLAIMER
+PROJECTS API CURRENTLY DOES NOT WORK. I WILL BE SWITCHING OVER TO https://data.spiceai.io/eth/v0.1/gasfees THIS WEEK. READ THEIR API DOCS HERE: https://docs.spice.xyz/api/ethereum/gas-fees
+
+
 ## About The Project
 
 The GasWatch bot is built to watch Ethereums gas price and act accordingly based on values defined by its config. The bot will take the value defined by `cooldown` and `gasvalue` and ping users who have a certain role whenever the API returns a value below `gasvalue`, as long as it is occurs after the time defined by `cooldown` has passed.
