@@ -16,7 +16,7 @@ module.exports = new Event("ready", client => {
         setInterval(async () => {
             try {
                 const response = await axios.get("https://data.spiceai.io/eth/v0.1/gasfees");
-                client.user.setActivity(`⚡${response.data.fast} | ✨${response.data.normal} | 🐢${response.data.slow}`);
+                client.user.setActivity(`⚡${response.data.fast} | ✨${response.data.normal} | 🐢${response.data.slow}`, {type: "WATCHING"});
             } catch (error) {
                 console.error("Error fetching gas data:", error);
             }
