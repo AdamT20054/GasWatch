@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: "[FEATURE]"
+title: ''
 labels: enhancement
 assignees: AdamT20054
 
@@ -18,6 +18,3 @@ A clear and concise description of any alternative solutions or features you've 
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
-
-**Any other examples**
-Are there any other examples of the feature you want present in a previous version or on other bots?
