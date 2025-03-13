@@ -111,7 +111,7 @@ As default, the bot has a 1Hour cool-down and is triggered when the GWEI gas val
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learned, inspire, and create. Any
-contributions you make are **greatly appreciated**.
+contributions you make are **greatly** appreciated.
 
 * If you have suggestions for adding or removing projects, feel free
   to [open an issue](https://github.com/AdamT20054/GasWatch/issues/new) to discuss it, or directly create a pull request
